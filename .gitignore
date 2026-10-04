@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Production build artifacts
+dist/
+build/
+out/
+
+# Environment files and credentials
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# System & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Deployment and temporary tool artifacts
+.vercel
+.system_generated
+coverage/
+

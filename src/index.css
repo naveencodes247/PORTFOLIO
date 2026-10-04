@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark, .dark *));
+
+@theme {
+  --font-editorial: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
+  --font-heading: 'Syne', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono-custom: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  :root {
+    --font-display: 'Bebas Neue', Impact, sans-serif;
+    --font-heading: 'Syne', sans-serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+.font-editorial {
+  font-family: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif !important;
+  letter-spacing: 0.03em;
+}
+
+.font-heading {
+  font-family: 'Syne', sans-serif !important;
+}
+
+.font-mono-custom {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(7, 105, 80, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(7, 105, 80, 0.6);
+}
+
+/* Print optimization for Resume */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-resume,
+  #printable-resume * {
+    visibility: visible;
+  }
+  #printable-resume {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white !important;
+    color: black !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
